@@ -1,0 +1,32 @@
+.confidentiality {
+    padding-top: 50px;
+}
+
+.confidentiality__title {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 30px;
+    color: var(--yellow);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.confidentiality__subtitle {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 25px;
+    color: var(--yellow);
+}
+
+.confidentiality__text {
+    text-align: justify;
+    font-family: var(--font-family);
+    font-size: 18px;
+    color: rgba(252, 255, 212, .5);
+    overflow: hidden;
+}
+
+.selection{
+    color: var(--yellow);
+    opacity: 1;
+}

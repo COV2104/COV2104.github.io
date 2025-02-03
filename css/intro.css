@@ -1,0 +1,108 @@
+.intro {
+  position: relative;
+  bottom: 80px;
+  height: 110vh;
+  background: url(/images/fon_finOlimp.webp) center;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 83%, 50% 100%, 0 83%);
+}
+
+.intro__backgraund {
+  position: absolute;
+  height: inherit;
+  width: 100%;
+  background: rgb(0, 0, 0, 75%);
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.intro__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 176px;
+  left: 200px;
+}
+
+.intro__title {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 50px;
+  color: var(--yellow);
+  margin-bottom: 43px;
+}
+
+.intro__subtitle {
+  font-family: var(--font-family);
+  
+  font-size: 18px;
+  text-align: center;
+  color: var(--yellow);
+  margin-bottom: 43px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-form__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  border: 0;
+}
+
+.search-form__info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-form__field {
+  width: 290px;
+  border: 0;
+  margin-right: 20px;
+  padding: 20px 45px;
+  color: #111;
+  background-color: #fff;
+  border-radius: 60px;
+  font-style: 18px;
+}
+
+.search-form__submit {
+  padding: 20px 45px;
+  border-radius: 60px;
+  text-transform: uppercase;
+  font-family: var(--font-family);
+  color: var(--white);
+  background-color: var(--may-color);
+}
+
+.search-form__submit:hover {
+  color: var(--may-color);
+  background-color: var(--yellow);
+}
+
+.intro__link-info {
+  text-align: center;
+}
+
+.intro__link {
+  font-family: var(--font-family);
+  font-size: 14px;
+  text-align: center;
+  color: var(--yellow);
+  display: inline-block;
+  margin-top: 21px;
+}
+
+.intro__link-text {
+  color: var(--may-color);
+  padding-left: 8px;
+}
