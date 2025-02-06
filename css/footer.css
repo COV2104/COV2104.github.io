@@ -10,7 +10,8 @@
 }
 
 .footer__logo {
-    width: 75px;
+    width: 125px;
+    text-align: center;
 }
 
 .footer__list {

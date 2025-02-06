@@ -28,13 +28,21 @@
   margin-right: 0;
 }
 
+.header__logo-link .logo-path {
+  fill: #fcffd4;
+  transition: fill 0.3s;
+}
+
+.header__logo-link:hover .logo-path {
+  fill: var(--may-color);
+}
+
 .header__logo-link svg {
-  width: 75px;
+  width: 125px;
   opacity: 0.5;
 }
 
 .header__logo-link svg:hover {
-  fill: var(--may-color);
   transform: scale(1.1);
 }
 
