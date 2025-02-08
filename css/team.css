@@ -1,0 +1,72 @@
+.wrap__team {
+  display: flex;
+  justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.team__baner {
+  width: 40%;
+}
+.team__form {
+  width: 50%;
+  padding: 3% 3%;
+}
+.team__subtitle {
+  line-height: 1.23;
+  padding-bottom: 20px;
+}
+.team__sbt {
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--yellow);
+  padding-bottom: 20px;
+  text-align: center;
+}
+.team__text {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 300;
+  color: var(--yellow);
+  padding-bottom: 20px;
+  text-align: center;
+}
+.team__form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.team__label {
+  display: block;
+  position: relative;
+}
+
+.team__input {
+  width: 100%;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0.72px;
+  padding: 20px 45px;
+  border-radius: 60px;
+  border: none;
+}
+
+.team__button {
+  padding: 20px 45px;
+  border-radius: 60px;
+  text-transform: uppercase;
+  font-family: var(--font-family);
+  color: var(--white);
+  background-color: var(--may-color);
+}
+
+.team-intro__link-info {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 45px;
+}
+.intro__link {
+  text-align: left;
+}

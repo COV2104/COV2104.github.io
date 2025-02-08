@@ -14,6 +14,11 @@
     text-align: center;
 }
 
+.footer__unp{
+    padding-top: 10px;
+    color: var(--yellow);
+}
+
 .footer__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

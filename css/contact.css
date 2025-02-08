@@ -1,0 +1,75 @@
+.contact {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.container__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact__title {
+  margin-bottom: 40px;
+}
+
+.contact__text {
+  font-family: var(--font-family);
+  color: var(--yellow);
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.contact__cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.contact__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact__pik {
+  width: 40px;
+  height: 40px;
+}
+
+.contact__subtitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  line-height: 1.35;
+  font-size: 26px;
+  text-align: center;
+  color: var(--yellow);
+  margin-bottom: 20px;
+}
+
+.contact__blok-time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.contact__item {
+  color: var(--yellow);
+  opacity: 0.5;
+}
+
+.contact__item:hover{
+  color: var(--may-color);
+}
+
+.contact__item-adress{
+  color: var(--yellow);
+  opacity: 0.5;
+  text-align: center;
+}

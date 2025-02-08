@@ -1,0 +1,17 @@
+:root {
+    --may-color: #6495ed;
+    --dark: #104257;
+    --yellow: #fcffd4;
+    --black: #423805;
+    --background-black-opasity: rgb(0, 0, 0, 90%);
+    --font-family: "PT Serif", sans-serif;
+    --second-family: "Roboto", sans-serif;
+}
+
+.title {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 47px;
+    color: var(--yellow);
+    text-align: center;
+}
