@@ -4,9 +4,10 @@
 }
 
 .footer__container {
-    display: grid;
-    grid-template-columns: 3fr 5fr 4fr;
-    gap: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .footer__logo {
