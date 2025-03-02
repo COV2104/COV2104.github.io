@@ -6,6 +6,7 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
     <title>ЭверФинКонсалт</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -13,13 +14,13 @@
         <nav class="header__navigation">
           <ul class="header__list">
             <li class="header__item">
-              <a href="/index.html" class="header__link">Главная</a>
+              <a href="./index.html" class="header__link">Главная</a>
             </li>
             <li class="header__item">
               <a href="./services.html" class="header__link">Услуги</a>
             </li>
             <li class="header__item">
-              <a href="/about.html" class="header__link">О нас</a>
+              <a href="./about.html" class="header__link">О нас</a>
             </li>
           </ul>
         </nav>
@@ -47,13 +48,13 @@
         <nav class="header__navigation">
           <ul class="header__list">
             <li class="header__item">
-              <a href="#" class="header__link">Акции</a>
+              <a href="./stocks.html" class="header__link">Акции</a>
             </li>
             <li class="header__item">
-              <a href="#" class="header__link">Контакты</a>
+              <a href="./contacts.html" class="header__link">Контакты</a>
             </li>
             <li class="header__item">
-              <a href="/reviews.html" class="header__link">Отзывы</a>
+              <a href="./reviews.html" class="header__link">Отзывы</a>
             </li>
           </ul>
         </nav>
@@ -81,7 +82,12 @@
               Оставте заявку и мы обязательно вам перезвоним
             </p>
             <div class="content__form">
-              <form class="team__form-label" action="" method="post">
+              <form
+                class="team__form-label"
+                id="callForm"
+                action="/send"
+                method="POST"
+              >
                 <label class="team__label">
                   <input
                     class="team__input"
@@ -91,7 +97,6 @@
                     placeholder="Введите ваше ФИО"
                   />
                 </label>
-
                 <label class="team__label team__label_last">
                   <input
                     class="team__input"
@@ -101,11 +106,11 @@
                     placeholder="Введите ваш номер телефона"
                   />
                 </label>
-
                 <input class="team__order" type="hidden" name="order" />
-
                 <button class="team__button">Позвоните нам</button>
               </form>
+              <div class="message" id="callMessage"></div>
+
               <div class="team-intro__link-info">
                 <a href="/confidentiality.html" class="intro__link"
                   >Нажимая на кнопку,<span class="intro__link-text"
@@ -167,9 +172,56 @@
             Сдача бухгалтерской и налоговой отчетности в налоговые органы, фонды
             и органы гос статистики
           </p>
-          
         </div>
       </section>
+
+      <section class="consultation">
+        <div class="container consultation__container">
+          <h1 class="consultation__subtitle title">
+            Давайте обсудим ваш проект
+          </h1>
+
+          <form
+            class="consultation__form"
+            id="callForm"
+            action="/send"
+            method="POST"
+          >
+            <label class="consultation__label">
+              <input
+                class="consultation__input"
+                required
+                name="bio"
+                type="text"
+                placeholder="Введите ваше ФИО"
+              />
+            </label>
+
+            <label class="consultation__label consultation__label_last">
+              <input
+                class="consultation__input"
+                required
+                name="tel"
+                type="tel"
+                placeholder="Введите ваш номер телефона"
+              />
+            </label>
+            <input class="consultation__order" type="hidden" name="order" />
+            <button class="consultation__button">Отправить заявку</button>
+          </form>
+          <div class="message" id="callMessage"></div>
+
+          <div class="consultation-intro__link-info">
+            <a href="./confidentiality.html" class="intro__link"
+              >Нажимая на кнопку,<span class="intro__link-text"
+                >Вы соглашаетесь с политикой обработки персональных
+                данных.</span
+              ></a
+            >
+          </div>
+        </div>
+      </section>
+
     </main>
 
     <footer class="footer">
@@ -197,22 +249,22 @@
           <nav class="footer__navigation">
             <ul class="footer__list">
               <li class="footer__item">
-                <a href="/index.html" class="footer__link">Главная</a>
+                <a href="./index.html" class="footer__link">Главная</a>
               </li>
               <li class="footer__item">
-                <a href="/services.html" class="footer__link">Услуги</a>
+                <a href="./services.html" class="footer__link">Услуги</a>
               </li>
               <li class="footer__item">
-                <a href="/about.html" class="footer__link">О нас</a>
+                <a href="./about.html" class="footer__link">О нас</a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">Акции</a>
+                <a href="./stocks.html" class="footer__link">Акции</a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">Контакты</a>
+                <a href="./contacts.html" class="footer__link">Контакты</a>
               </li>
               <li class="footer__item">
-                <a href="/reviews.html" class="footer__link">Отзывы</a>
+                <a href="./reviews.html" class="footer__link">Отзывы</a>
               </li>
             </ul>
           </nav>
@@ -283,5 +335,59 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      $(document).ready(function () {
+        $("#consultationForm").submit(function (e) {
+          e.preventDefault(); // Предотвращаем стандартное поведение формы
+
+          const telInput = $('input[name="phone"]');
+          const telRegex = /^\+375\d{9}$/;
+
+          if (!telRegex.test(telInput.val())) {
+            alert("Номер телефона должен быть в формате +375291234567");
+          } else {
+            const formData = $(this).serialize(); // Собираем данные формы
+            $.post("/send", formData)
+              .done(function (response) {
+                $("#consultationMessage")
+                  .text(response)
+                  .css("color", "#fcffd4");
+              })
+              .fail(function () {
+                $("#consultationMessage")
+                  .text("Ошибка при отправке.")
+                  .css("color", "red");
+              });
+            $("#consultationForm")[0].reset();
+          }
+        });
+
+        $("#callForm").submit(function (e) {
+          e.preventDefault(); // Предотвращаем стандартное поведение формы
+
+          const telInput = $('input[name="tel"]');
+          const telRegex = /^\+375\d{9}$/;
+
+          if (!telRegex.test(telInput.val())) {
+            alert("Номер телефона должен быть в формате +375291234567");
+          } else {
+            const formData = $(this).serialize(); // Собираем данные формы
+            $.post("/send", formData)
+              .done(function (response) {
+                $("#callMessage").text(response).css("color", "#fcffd4");
+              })
+              .fail(function () {
+                $("#callMessage")
+                  .text("Ошибка при отправке.")
+                  .css("color", "red");
+              });
+            $("#callForm")[0].reset();
+          }
+        });
+      });
+    </script>
+
+    <script src="/FIN/js/script.js"></script>
   </body>
 </html>

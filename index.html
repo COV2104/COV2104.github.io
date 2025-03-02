@@ -6,6 +6,7 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
     <title>ЭверФинКонсалт</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -13,19 +14,19 @@
         <nav class="header__navigation">
           <ul class="header__list">
             <li class="header__item">
-              <a href="/index.html" class="header__link">Главная</a>
+              <a href="./index.html" class="header__link">Главная</a>
             </li>
             <li class="header__item">
-              <a href="/services.html" class="header__link">Услуги</a>
+              <a href="./services.html" class="header__link">Услуги</a>
             </li>
             <li class="header__item">
-              <a href="/about.html" class="header__link">О нас</a>
+              <a href="./about.html" class="header__link">О нас</a>
             </li>
           </ul>
         </nav>
 
         <div class="header__logp">
-          <a href="/index.html" class="header__logo-link">
+          <a href="./index.html" class="header__logo-link">
             <svg
               width="248"
               height="79"
@@ -47,13 +48,13 @@
         <nav class="header__navigation">
           <ul class="header__list">
             <li class="header__item">
-              <a href="#" class="header__link">Акции</a>
+              <a href="./stocks.html" class="header__link">Акции</a>
             </li>
             <li class="header__item">
-              <a href="#" class="header__link">Контакты</a>
+              <a href="./contacts.html" class="header__link">Контакты</a>
             </li>
             <li class="header__item">
-              <a href="/reviews.html" class="header__link">Отзывы</a>
+              <a href="./reviews.html" class="header__link">Отзывы</a>
             </li>
           </ul>
         </nav>
@@ -71,7 +72,13 @@
             ЭверФинКонсалт — персональная бухгалтерия и надежный партнер,
             уважающий ваш бизнес.
           </p>
-          <form class="search-form">
+
+          <form
+            class="search-form"
+            id="consultationForm"
+            action="/send"
+            method="POST"
+          >
             <fieldset class="search-form__wrap">
               <p class="search-form__info">
                 <input
@@ -80,6 +87,7 @@
                   name="phone"
                   type="tel"
                   placeholder="Ваш телефон"
+                  required
                 />
                 <button class="search-form__submit" type="submit">
                   Получить консультацию
@@ -87,8 +95,10 @@
               </p>
             </fieldset>
           </form>
+          <div class="message" id="consultationMessage"></div>
+
           <div class="intro__link-info">
-            <a href="/confidentiality.html" class="intro__link"
+            <a href="./confidentiality.html" class="intro__link"
               >Нажимая на кнопку,<span class="intro__link-text"
                 >Вы соглашаетесь с политикой обработки персональных
                 данных.</span
@@ -105,7 +115,7 @@
             <div class="services__img">
               <img
                 class="services__baner"
-                src="/images/accountant.jpg"
+                src="./images/accountant.jpg"
                 alt="Бухгалтерские услуги"
               />
             </div>
@@ -208,7 +218,13 @@
           <h1 class="consultation__subtitle title">
             Давайте обсудим ваш проект
           </h1>
-          <form class="consultation__form" action="" method="post">
+
+          <form
+            class="consultation__form"
+            id="callForm"
+            action="/send"
+            method="POST"
+          >
             <label class="consultation__label">
               <input
                 class="consultation__input"
@@ -228,11 +244,11 @@
                 placeholder="Введите ваш номер телефона"
               />
             </label>
-
             <input class="consultation__order" type="hidden" name="order" />
-
             <button class="consultation__button">Отправить заявку</button>
           </form>
+          <div class="message" id="callMessage"></div>
+
           <div class="consultation-intro__link-info">
             <a href="/confidentiality.html" class="intro__link"
               >Нажимая на кнопку,<span class="intro__link-text"
@@ -298,8 +314,8 @@
               <h2 class="contact__subtitle">Адрес</h2>
               <div class="contact__blok-time">
                 <div class="contact__item-adress">
-                  г.Минск ул. 2-я Шестая линия <br>
-                   д.11 каб.6а-8-5
+                  г.Минск ул. 2-я Шестая линия <br />
+                  д.11 каб.6а-8-5
                 </div>
               </div>
             </div>
@@ -322,8 +338,10 @@
               </div>
               <h2 class="contact__subtitle">Режим работы</h2>
               <div class="contact__blok-time">
-                <div class="contact__item-adress">пн-пт <br> 9:00-18:00</div>
-                
+                <div class="contact__item-adress">
+                  пн-пт <br />
+                  9:00-18:00
+                </div>
               </div>
             </div>
           </div>
@@ -356,22 +374,22 @@
           <nav class="footer__navigation">
             <ul class="footer__list">
               <li class="footer__item">
-                <a href="/index.html" class="footer__link">Главная</a>
+                <a href="./index.html" class="footer__link">Главная</a>
               </li>
               <li class="footer__item">
-                <a href="/services.html" class="footer__link">Услуги</a>
+                <a href="./services.html" class="footer__link">Услуги</a>
               </li>
               <li class="footer__item">
-                <a href="/about.html" class="footer__link">О нас</a>
+                <a href="./about.html" class="footer__link">О нас</a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">Акции</a>
+                <a href="./stocks.html" class="footer__link">Акции</a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">Контакты</a>
+                <a href="./contacts.html" class="footer__link">Контакты</a>
               </li>
               <li class="footer__item">
-                <a href="/reviews.html" class="footer__link">Отзывы</a>
+                <a href="./reviews.html" class="footer__link">Отзывы</a>
               </li>
             </ul>
           </nav>
@@ -442,5 +460,59 @@
         </div>
       </div>
     </footer>
+
+     <script>
+      $(document).ready(function () {
+        $("#consultationForm").submit(function (e) {
+          e.preventDefault(); // Предотвращаем стандартное поведение формы
+
+          const telInput = $('input[name="phone"]');
+          const telRegex = /^\+375\d{9}$/;
+
+          if (!telRegex.test(telInput.val())) {
+            alert("Номер телефона должен быть в формате +375291234567");
+          } else {
+            const formData = $(this).serialize(); // Собираем данные формы
+            $.post("/send", formData)
+              .done(function (response) {
+                $("#consultationMessage")
+                  .text(response)
+                  .css("color", "#fcffd4");
+              })
+              .fail(function () {
+                $("#consultationMessage")
+                  .text("Ошибка при отправке.")
+                  .css("color", "red");
+              });
+            $("#consultationForm")[0].reset();
+          }
+        });
+
+        $("#callForm").submit(function (e) {
+          e.preventDefault(); // Предотвращаем стандартное поведение формы
+
+          const telInput = $('input[name="tel"]');
+          const telRegex = /^\+375\d{9}$/;
+
+          if (!telRegex.test(telInput.val())) {
+            alert("Номер телефона должен быть в формате +375291234567");
+          } else {
+            const formData = $(this).serialize(); // Собираем данные формы
+            $.post("/send", formData)
+              .done(function (response) {
+                $("#callMessage").text(response).css("color", "#fcffd4");
+              })
+              .fail(function () {
+                $("#callMessage")
+                  .text("Ошибка при отправке.")
+                  .css("color", "red");
+              });
+            $("#callForm")[0].reset();
+          }
+        });
+      });
+    </script>
+
+    <script src="/FIN/js/script.js"></script>
   </body>
 </html>

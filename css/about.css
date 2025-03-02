@@ -1,5 +1,6 @@
 .about {
   margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 .about__desk {
@@ -72,118 +73,6 @@
   margin-bottom: 20px;
 }
 
-/* .certificates {
-  flex-direction: column;
-  padding: 40px 0;
-  position: relative;
-}
-
-.certificates::before,
-.certificates::after {
-  content: "";
-  position: absolute;
-  border: 80px solid transparent;
-}
-
-.certificates:before {
-  border-top: 40px solid #fff;
-  top: 0;
-}
-
-.certificates:after {
-  border-top: 40px solid var(--background-grey);
-  bottom: -120px;
-}
-
-.certificates-list {
-  padding-bottom: 20px;
-  overflow: hidden;
-}
-
-.certificates-list__view:first-of-type {
-  animation: autoplay 10s infinite;
-}
-
-@keyframes autoplay {
-  17% {
-    margin-left: 0;
-  }
-
-
-  51% {
-    margin-left: -100%;
-  }
-
-
-
-  85% {
-    margin-left: -100%;
-  }
-
-  100% {
-    margin-left: 0;
-  }
-}
-
-.slider {
-  position: relative;
-  display: flex;
-  width: 100%;
-}
-
-.slider__wrapper {
-  flex: 0 0 100%;
-  display: flex;
-  justify-content: space-between;
-  min-width: 80%;
-  transition: all .5s ease;
-}
-
-.slider__link {
-  flex: 0 0 33%;
-  justify-content: center;
-}
-
-.slider__image {
-  width: 100%;
-  max-width: 300px;
-}
-
-.slider__input {
-  display: none;
-}
-
-.slider__controls {
-  position: absolute;
-  bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.slider__controls-element {
-  display: inline-block;
-  width: 30px;
-  height: 6px;
-  border-radius: 8px;
-  background: rgb(0, 0, 0, 20%);
-
-  cursor: pointer;
-  transition: all .25s ease;
-}
-
-.slider__controls-element:hover {
-  background: var(--color-green);
-}
-
-.slider__input:first-of-type:checked~.slider__wrapper:first-of-type {
-  margin-left: 0;
-}
-
-.slider__input:nth-of-type(2):checked~.slider__wrapper:first-of-type {
-  margin-left: -100%;
-} */
 
 .slider {
   display: flex;
@@ -212,15 +101,15 @@
 }
 
 .modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1000; 
+  display: none;
+  position: fixed;
+  z-index: 1000;
   left: 0;
   top: 83px;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgba(0,0,0,0.8); 
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal-content {
@@ -230,10 +119,30 @@
 }
 
 .close {
- position: absolute;
- top: 20px;
- right: 35px;
- color: white;
- font-size: 40px;
- cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+
+/* адаптив - планшет */
+
+@media (min-width: 768px) and (max-width: 1080px){
+  
+}
+
+/* адаптив - смартфон */
+@media screen and (min-width: 525px) and (max-width: 767px){
+  .modal {
+    top: 145px;
+}
+}
+
+@media screen and (min-width: 320px) and (max-width: 524px){
+  .modal {
+    top: 200px;
+}
 }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Формы</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <form
+      class="search-form"
+      id="consultationForm"
+      action="/send"
+      method="POST"
+    >
+      <fieldset class="search-form__wrap">
+        <p class="search-form__info">
+          <input
+            class="search-form__field"
+            id="phone"
+            name="phone"
+            type="tel"
+            placeholder="Ваш телефон"
+            required
+          />
+          <button class="search-form__submit" type="submit">
+            Получить консультацию
+          </button>
+        </p>
+      </fieldset>
+    </form>
+    <div class="message" id="consultationMessage"></div>
+
+    <div class="content__form">
+      <form class="team__form-label" id="callForm" action="/send" method="POST">
+        <label class="team__label">
+          <input
+            class="team__input"
+            required
+            name="bio"
+            type="text"
+            placeholder="Введите ваше ФИО"
+          />
+        </label>
+        <label class="team__label team__label_last">
+          <input
+            class="team__input"
+            required
+            name="tel"
+            type="tel"
+            placeholder="Введите ваш номер телефона"
+          />
+        </label>
+        <input class="team__order" type="hidden" name="order" />
+        <button class="team__button">Позвоните нам</button>
+      </form>
+      <div class="message" id="callMessage"></div>
+    </div>
+
+
+    <form class="consultation__form" id="callForm" action="/send" method="POST">
+      <label class="consultation__label">
+        <input
+          class="consultation__input"
+          required
+          name="bio"
+          type="text"
+          placeholder="Введите ваше ФИО"
+        />
+      </label>
+
+      <label class="consultation__label consultation__label_last">
+        <input
+          class="consultation__input"
+          required
+          name="tel"
+          type="tel"
+          placeholder="Введите ваш номер телефона"
+        />
+      </label>
+      <input class="consultation__order" type="hidden" name="order" />
+      <button class="consultation__button">Отправить заявку</button>
+    </form>
+    <div class="message" id="callMessage"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("#consultationForm").submit(function (e) {
+          e.preventDefault(); // Предотвращаем стандартное поведение формы
+          const formData = $(this).serialize(); // Собираем данные формы
+          $.post("/send", formData)
+            .done(function (response) {
+              $("#consultationMessage").text(response).css("color", "#fcffd4");
+            })
+            .fail(function () {
+              $("#consultationMessage")
+                .text("Ошибка при отправке.")
+                .css("color", "red");
+            });
+        });
+        $("#callForm").submit(function (e) {
+          e.preventDefault(); // Предотвращаем стандартное поведение формы
+          const formData = $(this).serialize(); // Собираем данные формы
+          $.post("/send", formData)
+            .done(function (response) {
+              $("#callMessage").text(response).css("color", "#fcffd4");
+            })
+            .fail(function () {
+              $("#callMessage")
+                .text("Ошибка при отправке.")
+                .css("color", "red");
+            });
+        });
+      });
+    </script>
+  </body>
+</html>

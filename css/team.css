@@ -1,20 +1,23 @@
 .wrap__team {
   display: flex;
   justify-content: space-evenly;
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .team__baner {
   width: 40%;
 }
+
 .team__form {
   width: 50%;
   padding: 3% 3%;
 }
+
 .team__subtitle {
   line-height: 1.23;
   padding-bottom: 20px;
 }
+
 .team__sbt {
   font-family: var(--font-family);
   font-size: 20px;
@@ -23,6 +26,7 @@
   padding-bottom: 20px;
   text-align: center;
 }
+
 .team__text {
   font-family: var(--font-family);
   font-size: 16px;
@@ -32,6 +36,7 @@
   padding-bottom: 20px;
   text-align: center;
 }
+
 .team__form-label {
   display: flex;
   flex-direction: column;
@@ -67,6 +72,57 @@
   justify-content: space-around;
   padding-bottom: 45px;
 }
+
 .intro__link {
   text-align: left;
+}
+
+/* адаптив - планшет */
+
+@media (min-width: 768px) and (max-width: 970px) {
+  .about__text-element {
+    flex: 1 1 33%;
+  }
+}
+
+/* адаптив - смартфон */
+@media screen and (min-width: 525px) and (max-width: 767px) {
+  .wrap__team {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team__baner {
+    order: 1;
+    width: 100%;
+  }
+
+  .team__form {
+    order: 2;
+    width: 100%;
+  }
+
+  .about__text-element {
+    flex: 1 1 33%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 524px) {
+  .wrap__team {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team__baner {
+    order: 1;
+    width: 100%;
+  }
+
+  .team__form {
+    order: 2;
+    width: 100%;
+  }
+  .about__text-element {
+    flex: 0 0 100%;
+  }
 }

@@ -62,61 +62,133 @@
     </header>
 
     <main class="main">
-      <section class="reviews container">
-        <div class="review">
-          <div class="review-text">
-            Хочу поделиться своим опытом сотрудничества с консалтинговой
-            компанией, которая оказывала мне услуги по бухгалтерскому
-            обслуживанию. <br />
+      <section class="stocks">
+        <div class="stocks__element">
+          <div class="right">
+            <div class="stocks__element-title">
+              Акция Знакомство!
+            </div>
+            <div class="stocks__element-subtitle">
+              Получите скидку 30% на договор обслуживания на полгода!
+            </div>
+            <div class="stocks__element-text">
+              Эта уникальная возможность позволит вам получить качественные
+              консалтинговые услуги по выгодной цене.
+            </div>
+            <div class="stocks__element-text">
+              <span class="selection">Условия акции:</span> <br />
+              - Скидка действует на первый договор обслуживания. <br />
+              - Акция действует до <ins>вставьте дату окончания</ins> .
+            </div>
+            <div class="stocks__element-subtitle">
+              Не упустите шанс улучшить ваш бизнес с профессиональной помощью!
+              Свяжитесь с нами уже сегодня!
+            </div>
+            <form
+              class="search-form"
+              id="consultationForm"
+              action="/send"
+              method="POST"
+            >
+              <fieldset class="search-form__wrap">
+                <p class="search-form__info">
+                  <input
+                    class="search-form__field"
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="Ваш телефон"
+                    required
+                  />
+                  <button class="search-form__submit" type="submit">
+                    Получить консультацию
+                  </button>
+                </p>
+              </fieldset>
+            </form>
+            <div class="message" id="consultationMessage"></div>
 
-            Работа с этой компанией превзошла все мои ожидания. С самого начала
-            команда проявила высокий профессионализм и внимание к деталям.
-            Специалисты тщательно изучили особенности моего бизнеса и предложили
-            индивидуальный подход, который полностью соответствовал нашим
-            потребностям. <br />
-
-            Коммуникация была на высшем уровне — все вопросы решались быстро и
-            без лишних проволочек. Мне особенно понравилось, что бухгалтера
-            всегда были на связи и готовы объяснить сложные моменты простым
-            языком. <br />
-
-            Благодаря их услуге я уверенно чувствую себя в вопросах учета и
-            отчетности. Все документы были подготовлены вовремя, и я теперь
-            абсолютно спокоен за финансовую сторону моего бизнеса. <br />
-
-            Рекомендую эту консалтинговую компанию всем, кто ищет надежного
-            партнера в области бухгалтерии. Они действительно знают свое дело и
-            делают его хорошо!
+            <div class="intro__link-info">
+              <a href="./confidentiality.html" class="intro__link"
+                >Нажимая на кнопку,<span class="intro__link-text"
+                  >Вы соглашаетесь с политикой обработки персональных
+                  данных.</span
+                ></a
+              >
+            </div>
           </div>
-          <div class="review-subtitle">
-            Михаил, ООО "Компания А"
+
+          <div class="left baner">
+            <div class="overlay"></div>
+            <img
+              class="stocks__images"
+              src="./images/acquaintance.webp"
+              alt="Акция Знакомство"
+            />
           </div>
         </div>
-        <div class="review">
-          <div class="review-text">
-            Наша компания обратилась в "ЭверФинКонсалт" в связи с необходимостью
-            оптимизации налогообложения. Мы искали решения, которые бы позволили
-            нам законно снизить налоговую нагрузку и повысить эффективность
-            бизнеса. <br />
 
-            "ЭверФинКонсалт" провела глубокий анализ нашей финансовой
-            деятельности и предложила ряд конкретных и эффективных решений.
-            Консультанты были очень внимательны к нашим потребностям и подробно
-            объясняли все нюансы предложенных стратегий. Особенно хочется
-            отметить их профессионализм и оперативность в подготовке необходимых
-            документов. Благодаря их работе, мы смогли значительно снизить
-            налоговые выплаты и освободить средства для дальнейшего развития
-            компании. <br />
-
-            В процессе работы не возникло никаких проблем или недопониманий. Все
-            вопросы решались быстро и профессионально. <br />
-
-            Я рекомендую "ЭверФинКонсалт" как надежного и опытного партнера в
-            сфере налогового консультирования. Они действительно помогают
-            бизнесу экономить деньги и оптимизировать свою деятельность. <br />
+        <div class="stocks__element">
+          <div class="left baner">
+            <div class="overlay"></div>
+            <img
+              class="stocks__images"
+              src="./images/spring.webp"
+              alt="Акция Весенняя"
+            />
           </div>
-          <div class="review-subtitle">
-            Елена, ООО "Компания В"
+          <div class="right">
+            <div class="stocks__element-title">
+              Акция Весенняя!
+            </div>
+            <div class="stocks__element-subtitle">
+              Получите скидку 25% при заключении договора на обслуживание до
+              30.05.2025!
+            </div>
+            <div class="stocks__element-text">
+              Воспользуйтесь этой весной для того, чтобы сделать ваш бизнес еще
+              успешнее с нашими профессиональными консалтинговыми услугами.
+            </div>
+            <div class="stocks__element-text">
+              <span class="selection">Условия акции:</span> <br />
+              - Скидка 25% действует при подписании договора <ins>до 30.05.2025</ins>. <br> 
+              - Применяется на все пакеты обслуживания.
+            </div>
+            <div class="stocks__element-subtitle">
+              Не упустите шанс развивать свой бизнес по выгодной цене! Свяжитесь с нами и узнайте подробности!
+            </div>
+            <form
+              class="search-form"
+              id="consultationForm"
+              action="/send"
+              method="POST"
+            >
+              <fieldset class="search-form__wrap">
+                <p class="search-form__info">
+                  <input
+                    class="search-form__field"
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="Ваш телефон"
+                    required
+                  />
+                  <button class="search-form__submit" type="submit">
+                    Получить консультацию
+                  </button>
+                </p>
+              </fieldset>
+            </form>
+            <div class="message" id="consultationMessage"></div>
+
+            <div class="intro__link-info">
+              <a href="./confidentiality.html" class="intro__link"
+                >Нажимая на кнопку,<span class="intro__link-text"
+                  >Вы соглашаетесь с политикой обработки персональных
+                  данных.</span
+                ></a
+              >
+            </div>
           </div>
         </div>
       </section>
@@ -167,7 +239,6 @@
           </div>
         </div>
       </section>
-
     </main>
     <footer class="footer">
       <div class="container footer__container">

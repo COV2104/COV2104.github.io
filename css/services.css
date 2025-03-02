@@ -2,9 +2,11 @@
   background: #1f1e1b,
     linear-gradient(163deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
 }
+
 .services__container {
   margin-bottom: 45px;
 }
+
 .services__title {
   margin: 50px;
 }
@@ -17,9 +19,10 @@
   display: flex;
   gap: 50px;
   padding-bottom: 40px;
+  align-items: center;
 }
 
-.services__img{
+.services__img {
   flex: 1 1 30%;
 }
 
@@ -37,9 +40,9 @@
   font-weight: 400;
   font-size: 25px;
   color: var(--yellow);
-  height: 50px;
+  /* height: 50px; */
   overflow: hidden;
-  /* margin-bottom: 58px; */
+  margin-bottom: 20px;
 }
 
 .services__desk {
@@ -51,7 +54,7 @@
   opacity: 0.5;
   /* height: 51px; */
   overflow: hidden;
-  /* margin-bottom: 58px; */
+  margin-bottom: 20px;
 }
 
 .services__button {
@@ -60,10 +63,10 @@
 }
 
 .button__link {
-  display: inline-block; 
-  padding: 10px 20px; 
-  background-color: var(--may-color); 
-  color: var(--yellow); 
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--may-color);
+  color: var(--yellow);
   text-align: center;
   text-decoration: none;
   border-radius: 60px;
@@ -72,4 +75,31 @@
 .button__link:hover {
   color: var(--may-color);
   background-color: var(--yellow);
+}
+
+/* адаптив - планшет */
+
+@media (min-width: 768px) and (max-width: 1080px) {}
+
+/* адаптив - смартфон */
+@media screen and (min-width: 525px) and (max-width: 767px) {}
+
+@media screen and (min-width: 320px) and (max-width: 524px) {
+  .services {
+    margin-top: 140px;
+  }
+
+  .services__title {
+    margin: 0;
+  }
+
+  .services__card {
+    flex-direction: column; 
+  }
+  .services__img {
+    order: 1; 
+  }
+  .services__info {
+    order: 2; 
+  }
 }

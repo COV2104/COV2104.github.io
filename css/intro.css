@@ -1,10 +1,10 @@
 .intro {
   position: relative;
   bottom: 80px;
-  height: 110vh;
+  height: 100vh;
   background: url(/images/fon_finOlimp.webp) center;
   background-size: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 83%, 50% 100%, 0 83%);
+  /* clip-path: polygon(0 0, 100% 0, 100% 83%, 50% 100%, 0 83%); */
 }
 
 .intro__backgraund {
@@ -39,7 +39,7 @@
 
 .intro__subtitle {
   font-family: var(--font-family);
-  
+
   font-size: 18px;
   text-align: center;
   color: var(--yellow);
@@ -105,4 +105,21 @@
 .intro__link-text {
   color: var(--may-color);
   padding-left: 8px;
+}
+
+/* адаптив - смартфон */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .search-form__info {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .search-form__field {
+    width: 250px;
+    margin-right: 0;
+  }
+
+  .intro__container {
+    top: 100px;
+  }
 }

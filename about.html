@@ -6,6 +6,7 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
     <title>ЭверФинКонсалт</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -13,13 +14,13 @@
         <nav class="header__navigation">
           <ul class="header__list">
             <li class="header__item">
-              <a href="/index.html" class="header__link">Главная</a>
+              <a href="./index.html" class="header__link">Главная</a>
             </li>
             <li class="header__item">
               <a href="./services.html" class="header__link">Услуги</a>
             </li>
             <li class="header__item">
-              <a href="/about.html" class="header__link">О нас</a>
+              <a href="./about.html" class="header__link">О нас</a>
             </li>
           </ul>
         </nav>
@@ -47,13 +48,13 @@
         <nav class="header__navigation">
           <ul class="header__list">
             <li class="header__item">
-              <a href="#" class="header__link">Акции</a>
+              <a href="./stocks.html" class="header__link">Акции</a>
             </li>
             <li class="header__item">
-              <a href="#" class="header__link">Контакты</a>
+              <a href="./contacts.html" class="header__link">Контакты</a>
             </li>
             <li class="header__item">
-              <a href="/reviews.html" class="header__link">Отзывы</a>
+              <a href="./reviews.html" class="header__link">Отзывы</a>
             </li>
           </ul>
         </nav>
@@ -81,7 +82,12 @@
               Оставте заявку и мы обязательно вам перезвоним
             </p>
             <div class="content__form">
-              <form class="team__form-label" action="" method="post">
+              <form
+                class="team__form-label"
+                id="callForm"
+                action="/send"
+                method="POST"
+              >
                 <label class="team__label">
                   <input
                     class="team__input"
@@ -91,7 +97,6 @@
                     placeholder="Введите ваше ФИО"
                   />
                 </label>
-
                 <label class="team__label team__label_last">
                   <input
                     class="team__input"
@@ -101,19 +106,19 @@
                     placeholder="Введите ваш номер телефона"
                   />
                 </label>
-
                 <input class="team__order" type="hidden" name="order" />
-
                 <button class="team__button">Позвоните нам</button>
               </form>
-              <div class="team-intro__link-info">
-                <a href="/confidentiality.html" class="intro__link"
-                  >Нажимая на кнопку,<span class="intro__link-text"
-                    >Вы соглашаетесь с политикой обработки персональных
-                    данных.</span
-                  ></a
-                >
-              </div>
+              <div class="message" id="callMessage"></div>
+            </div>
+
+            <div class="team-intro__link-info">
+              <a href="./confidentiality.html" class="intro__link"
+                >Нажимая на кнопку,<span class="intro__link-text"
+                  >Вы соглашаетесь с политикой обработки персональных
+                  данных.</span
+                ></a
+              >
             </div>
           </div>
         </div>
@@ -205,70 +210,121 @@
           <div class="about__desk" id="certificates">
             <h2 class="about__subtitle title">Свидетельства и сертификаты</h2>
             <div class="slider">
-              <button class="navButton prev" onclick="moveSlide(-1)">&#10094;</button>
+              <button class="navButton prev" onclick="moveSlide(-1)">
+                &#10094;
+              </button>
               <div class="certificate-container">
                 <div
                   class="certificate"
-                  onclick="openModal('/images/Сертификаты/Сертификат_1.webp')"
+                  onclick="openModal('./images/Сертификаты/Сертификат_1.webp')"
                 >
                   <img
-                    src="/images/Сертификаты/Сертификат_1.webp"
+                    src=".\images\Сертификаты\Сертификат_1.webp"
                     alt="Сертификат 1"
                   />
                 </div>
                 <div
                   class="certificate"
-                  onclick="openModal('/images/Сертификаты/сертификат_2.webp')"
+                  onclick="openModal('./images/Сертификаты/сертификат_2.webp')"
                 >
                   <img
-                    src="/images/Сертификаты/сертификат_2.webp"
+                    src=".\images\Сертификаты\сертификат_2.webp"
                     alt="Сертификат 2"
                   />
                 </div>
                 <div
                   class="certificate"
-                  onclick="openModal('/images/Сертификаты/сертификат_3.webp')"
+                  onclick="openModal('./images/Сертификаты/сертификат_3.webp')"
                 >
                   <img
-                    src="/images/Сертификаты/сертификат_3.webp"
+                    src=".\images\Сертификаты\сертификат_3.webp"
                     alt="Сертификат 3"
                   />
                 </div>
                 <div
                   class="certificate"
-                  onclick="openModal('/images/Сертификаты/сертификат_4.webp')"
+                  onclick="openModal('./images/Сертификаты/сертификат_4.webp')"
                 >
                   <img
-                    src="/images/Сертификаты/сертификат_4.webp"
+                    src=".\images\Сертификаты\сертификат_4.webp"
                     alt="Сертификат 4"
                   />
                 </div>
                 <div
                   class="certificate"
-                  onclick="openModal('/images/Сертификаты/Сертификат_5.webp')"
+                  onclick="openModal('./images/Сертификаты/Сертификат_5.webp')"
                 >
                   <img
-                    src="/images/Сертификаты/Сертификат_5.webp"
+                    src=".\images\Сертификаты\Сертификат_5.webp"
                     alt="Сертификат 5"
                   />
                 </div>
                 <div
                   class="certificate"
-                  onclick="openModal('/images/Сертификаты/сертификат_6.jpg')"
+                  onclick="openModal('./images/Сертификаты/сертификат_6.jpg')"
                 >
                   <img
-                    src="/images/Сертификаты/Сертификат_6.jpg"
+                    src=".\images\Сертификаты\Сертификат_6.jpg"
                     alt="Сертификат 6"
                   />
                 </div>
               </div>
-              <button class="navButton next" onclick="moveSlide(1)">&#10095;</button>
+              <button class="navButton next" onclick="moveSlide(1)">
+                &#10095;
+              </button>
             </div>
 
             <div class="modal" id="modal">
               <span class="close" onclick="closeModal()">&times;</span>
               <img class="modal-content" id="modalImage" src="" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="consultation">
+        <div class="container consultation__container">
+          <h1 class="consultation__subtitle title">
+            Давайте обсудим ваш проект
+          </h1>
+
+          <form
+            class="consultation__form"
+            id="callForm"
+            action="/send"
+            method="POST"
+          >
+            <label class="consultation__label">
+              <input
+                class="consultation__input"
+                required
+                name="bio"
+                type="text"
+                placeholder="Введите ваше ФИО"
+              />
+            </label>
+
+            <label class="consultation__label consultation__label_last">
+              <input
+                class="consultation__input"
+                required
+                name="tel"
+                type="tel"
+                placeholder="Введите ваш номер телефона"
+              />
+            </label>
+            <input class="consultation__order" type="hidden" name="order" />
+            <button class="consultation__button">Отправить заявку</button>
+          </form>
+          <div class="message" id="callMessage"></div>
+
+          <div class="consultation-intro__link-info">
+            <a href="./confidentiality.html" class="intro__link"
+              >Нажимая на кнопку,<span class="intro__link-text"
+                >Вы соглашаетесь с политикой обработки персональных
+                данных.</span
+              ></a
+            >
           </div>
         </div>
       </section>
@@ -299,22 +355,22 @@
           <nav class="footer__navigation">
             <ul class="footer__list">
               <li class="footer__item">
-                <a href="/index.html" class="footer__link">Главная</a>
+                <a href="./index.html" class="footer__link">Главная</a>
               </li>
               <li class="footer__item">
-                <a href="/services.html" class="footer__link">Услуги</a>
+                <a href="./services.html" class="footer__link">Услуги</a>
               </li>
               <li class="footer__item">
-                <a href="/about.html" class="footer__link">О нас</a>
+                <a href="./about.html" class="footer__link">О нас</a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">Акции</a>
+                <a href="./contacts.html" class="footer__link">Акции</a>
               </li>
               <li class="footer__item">
-                <a href="#" class="footer__link">Контакты</a>
+                <a href="./contacts.html" class="footer__link">Контакты</a>
               </li>
               <li class="footer__item">
-                <a href="/reviews.html" class="footer__link">Отзывы</a>
+                <a href="./reviews.html" class="footer__link">Отзывы</a>
               </li>
             </ul>
           </nav>
@@ -384,6 +440,124 @@
       </div>
     </footer>
 
-    <script src="/js/script.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#consultationForm").submit(function (e) {
+          e.preventDefault(); // Предотвращаем стандартное поведение формы
+
+          const telInput = $('input[name="phone"]');
+          const telRegex = /^\+375\d{9}$/;
+
+          if (!telRegex.test(telInput.val())) {
+            alert("Номер телефона должен быть в формате +375291234567");
+          } else {
+            const formData = $(this).serialize(); // Собираем данные формы
+            $.post("/send", formData)
+              .done(function (response) {
+                $("#consultationMessage")
+                  .text(response)
+                  .css("color", "#fcffd4");
+              })
+              .fail(function () {
+                $("#consultationMessage")
+                  .text("Ошибка при отправке.")
+                  .css("color", "red");
+              });
+            $("#consultationForm")[0].reset();
+          }
+        });
+
+        $("#callForm").submit(function (e) {
+          e.preventDefault(); // Предотвращаем стандартное поведение формы
+
+          const telInput = $('input[name="tel"]');
+          const telRegex = /^\+375\d{9}$/;
+
+          if (!telRegex.test(telInput.val())) {
+            alert("Номер телефона должен быть в формате +375291234567");
+          } else {
+            const formData = $(this).serialize(); // Собираем данные формы
+            $.post("/send", formData)
+              .done(function (response) {
+                $("#callMessage").text(response).css("color", "#fcffd4");
+              })
+              .fail(function () {
+                $("#callMessage")
+                  .text("Ошибка при отправке.")
+                  .css("color", "red");
+              });
+            $("#callForm")[0].reset();
+          }
+        });
+      });
+
+
+      // скрипт для сертификатов
+      $(document).ready(function () {
+        let currentIndex = 0;
+        const certificates = $(".certificate");
+        const totalCertificates = certificates.length;
+        let autoSlideInterval; // Variable to hold the interval ID
+
+        function showCertificates() {
+          certificates.each(function (index) {
+            $(this).css(
+              "display",
+              index >= currentIndex && index < currentIndex + 3
+                ? "block"
+                : "none"
+            );
+          });
+        }
+
+        function moveSlide(direction) {
+          currentIndex += direction;
+
+          if (currentIndex < 0) {
+            currentIndex = totalCertificates - 3;
+          } else if (currentIndex > totalCertificates - 3) {
+            currentIndex = 0;
+          }
+
+          showCertificates();
+        }
+
+        // Инициализировать слайдер
+        showCertificates();
+
+        // Ручное переключение слайдов
+        $(".prev").click(function () {
+          clearInterval(autoSlideInterval); // Остановить автоматическое скольжение при ручном нажатии
+          moveSlide(-1);
+          startAutoSlide(); // Перезапустите автоматическое скольжение после щелчка вручную.
+        });
+
+        $(".next").click(function () {
+          clearInterval(autoSlideInterval); // Остановить автоматическое скольжение при ручном нажатии
+          moveSlide(1);
+          startAutoSlide(); // Перезапустите автоматическое скольжение после щелчка вручную.
+        });
+
+        // Модальная функциональность
+        window.openModal = function (imageSrc) {
+          $("#modal").css("display", "block");
+          $("#modalImage").attr("src", imageSrc);
+        };
+
+        window.closeModal = function () {
+          $("#modal").css("display", "none");
+        };
+
+        // Функция запуска автоматического скольжения
+        function startAutoSlide() {
+          autoSlideInterval = setInterval(function () {
+            moveSlide(1); // Перейти к следующему слайду
+          }, 3000); // Меняйте слайд каждые 3 секунды
+        }
+
+        // Запустить автоматическое скольжение при загрузке страницы
+        startAutoSlide();
+      });
+    </script>
   </body>
 </html>
