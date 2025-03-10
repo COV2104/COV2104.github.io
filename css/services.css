@@ -77,6 +77,36 @@
   background-color: var(--yellow);
 }
 
+.services__content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.services__element {
+  padding: 3% 3%;
+  flex: 0 0 33%;
+}
+
+.services__element-img {
+  margin-bottom: 15px;
+}
+
+.services__subtext {
+  
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--yellow);
+}
+
+.services__text {
+  font-family: var(--font-family);
+  font-size: 18px;
+  color: rgba(252, 255, 212, .5);
+  overflow: hidden;
+}
+
+
 /* адаптив - планшет */
 
 @media (min-width: 768px) and (max-width: 1080px) {}
@@ -94,12 +124,18 @@
   }
 
   .services__card {
-    flex-direction: column; 
+    flex-direction: column;
   }
+
   .services__img {
-    order: 1; 
+    order: 1;
   }
+
   .services__info {
-    order: 2; 
+    order: 2;
+  }
+
+  .services__content {
+    flex-direction: column;
   }
 }
