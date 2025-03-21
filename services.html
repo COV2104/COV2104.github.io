@@ -83,42 +83,28 @@
             </p>
             <div class="content__form">
               <form
-                class="team__form-label"
-                id="callForm"
+                class="search-form"
+                id="consultationForm"
                 action="/send"
                 method="POST"
               >
-                <label class="team__label">
-                  <input
-                    class="team__input"
-                    required
-                    name="bio"
-                    type="text"
-                    placeholder="Введите ваше ФИО"
-                  />
-                </label>
-                <label class="team__label team__label_last">
-                  <input
-                    class="team__input"
-                    required
-                    name="tel"
-                    type="tel"
-                    placeholder="Введите ваш номер телефона"
-                  />
-                </label>
-                <input class="team__order" type="hidden" name="order" />
-                <button class="team__button">Позвоните нам</button>
+                <fieldset class="search-form__wrap">
+                  <p class="search-form__info">
+                    <input
+                      class="search-form__field"
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="Ваш телефон"
+                      required
+                    />
+                    <button class="search-form__submit" type="submit">
+                      Получить консультацию
+                    </button>
+                  </p>
+                </fieldset>
               </form>
-              <div class="message" id="callMessage"></div>
-
-              <div class="team-intro__link-info">
-                <a href="/confidentiality.html" class="intro__link"
-                  >Нажимая на кнопку,<span class="intro__link-text"
-                    >Вы соглашаетесь с политикой обработки персональных
-                    данных.</span
-                  ></a
-                >
-              </div>
+              <div class="message" id="consultationMessage"></div>
             </div>
           </div>
         </div>
@@ -313,7 +299,7 @@
           <div class="message" id="callMessage"></div>
 
           <div class="consultation-intro__link-info">
-            <a href="./confidentiality.html" class="intro__link"
+            <a href="/confidentiality.html" class="intro__link"
               >Нажимая на кнопку,<span class="intro__link-text"
                 >Вы соглашаетесь с политикой обработки персональных
                 данных.</span
