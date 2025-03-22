@@ -13,17 +13,19 @@
 }
 
 .about__text {
+  text-align: justify;
   font-family: var(--font-family);
   font-size: 18px;
   color: rgba(252, 255, 212, .5);
-  margin-bottom: 43px;
+  margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
+
 .about__text-element {
-  flex: 1 1 20%;
+  flex: 1 1 32%;
   padding: 5px 5px;
   border-radius: 5px;
   box-shadow: 5px 5px 15px rgba(252, 255, 212, 0.2);
@@ -72,6 +74,9 @@
   margin-bottom: 20px;
 }
 
+#certificates{
+  margin-bottom: 25px;
+}
 
 .slider {
   display: flex;

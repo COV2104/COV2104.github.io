@@ -2,6 +2,10 @@
     padding: 50px 0; 
 }
 
+.review__title{
+    margin-bottom: 25px;
+}
+
 .review{
     padding: 20px;
     margin-bottom: 30px;
