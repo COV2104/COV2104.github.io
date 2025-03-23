@@ -83,6 +83,7 @@
 }
 
 .services__element {
+  transition: transform 0.3s ease;
   padding: 3% 3%;
   flex: 0 0 31%;
   border-radius: 5px;
@@ -90,16 +91,28 @@
   margin: 10px;
 }
 
+.services__element:hover {
+  transform: scale(1.05);
+  
+}
+
 .services__element-img {
   margin-bottom: 15px;
 }
 
 .services__subtext {
-
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 20px;
   color: var(--yellow);
+}
+
+.service__subtext {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 30px;
+  color: var(--yellow);
+  margin-bottom: 20px;
 }
 
 .services__text {
@@ -107,6 +120,11 @@
   font-size: 18px;
   color: rgba(252, 255, 212, .5);
   overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.service__element {
+  margin-bottom: 20px;
 }
 
 
