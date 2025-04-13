@@ -85,7 +85,7 @@
 .services__element {
   transition: transform 0.3s ease;
   padding: 3% 3%;
-  flex: 0 0 31%;
+  flex: 0 0 48%;
   border-radius: 5px;
   box-shadow: 5px 5px 10px rgba(252, 255, 212, 0.2);
   margin: 10px;
@@ -105,6 +105,15 @@
   font-weight: 400;
   font-size: 20px;
   color: var(--yellow);
+  margin-bottom: 10px;
+}
+
+.services__subtext .left{
+  flex: 0 0 70%;
+}
+
+.price{
+  display: flex;
 }
 
 .service__subtext {
